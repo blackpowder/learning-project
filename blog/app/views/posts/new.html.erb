@@ -1,0 +1,20 @@
+<%= form_for @post do |f| %>
+	<p>
+	<%= f.label :title %>
+	<%= f.text_field :title, size: 45 %>
+	</p>
+
+	<p>
+	<%= f.label :text %>
+	<%= f.text_area(:text, cols: 45, rows: 10)%>
+	</p>
+
+	<p>
+	<%= f.label :author %>
+	<%= f.text_field :author, size: 20 %>
+	</p>
+
+	<%= f.submit %>
+<% end %>
+
+
