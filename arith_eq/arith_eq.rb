@@ -9,7 +9,7 @@ def check_answer_input
 		puts "{answer: #{result}}"
 		answer_user = gets.chomp
 
-		if answer_user.downcase == "q"
+		if answer_user.downcase == "q"              #make a new method for if ???
 			exit
 		elsif answer_user.to_i == result
 			puts "Correct!"
@@ -29,7 +29,7 @@ def new_equation(range)
 	operator1 = get_operator
 	operator2 = get_operator
 	operator3 = get_operator
-	
+
 	"#{number1}  #{operator1} #{number2}  #{operator2} #{number3}  #{operator3} #{number4}"
 end
 
