@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  grade: MyString
+  role: MyString
+  introduction: MyText
+  biography: MyText
+  goals: MyText
+  learning_goals: MyText
+  teach: MyText
+  linked_in: MyString
+  yammer: MyString
+  github: MyString
+  email: MyString
+
+two:
+  name: MyString
+  grade: MyString
+  role: MyString
+  introduction: MyText
+  biography: MyText
+  goals: MyText
+  learning_goals: MyText
+  teach: MyText
+  linked_in: MyString
+  yammer: MyString
+  github: MyString
+  email: MyString
