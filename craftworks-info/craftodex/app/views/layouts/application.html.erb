@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Craftodex</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Craftworks - Team</title>
+    <%= stylesheet_link_tag "style" %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <%= stylesheet_link_tag "bootstrap.min" %>
+  </head>
 
-<%= yield %>
+  <body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <%= javascript_include_tag "jquery-2.0.3" %>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <%= javascript_include_tag "bootstrap.min" %>
 
-</body>
+    <div class="container">
+      <div class="header">
+        <h1>CRAFTWORKS</h1>
+        <p>
+          <a href="#" class="btn btn-default disabled">TEAM</a>
+          <a href="projects.html" class="btn btn-default">PROJECTS</a>
+        </p>
+      </div>
+
+      <div class="CraftText">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt velit esse cillum. <a href="https://docs.google.com/document/d/1S_XT30No56YNRYEb113KPUoODIL3scOa5c4CsHAqKpA/edit#" title="Acced to the Craftwork documentation">Learn more</a>
+        </p>
+      </div>
+
+      <%= yield %>
+
+    </div>
+  </body>
 </html>
