@@ -5,8 +5,9 @@
 	<div>
 		<div class="col-xs-12 col-sm-4 col-md-3">
 	    <a data-toggle="modal" href="#myModal<%= person.id %>">
+
 	      <figure class="photos_team container">
-	        <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
+	        <%= image_tag avatar_url(person), :class => "img-responsive img-rounded" %>
 	        <figcaption class="name text-center"><%= person.name %></figcaption>
 	        <figcaption class="job text-center"><%= person.job_title %></figcaption>
 	        <figcaption class= "city text-center"><%= person.city %></figcaption>       
@@ -29,7 +30,7 @@
 	            <p><strong>Grade: </strong><%= person.grade %></p>
 	          </div>
 
-	        	<img src="images/profil.jpg" class="img-responsive img-thumbnail img-profil pull-right" alt="Bloc-Notes" />
+	          	<%= image_tag avatar_url(person), :class => "img-responsive img-thumbnail img-profil pull-right " %>
 
 	       		<% if person.introduction? %>
 		          <h4 class="categories" style="clear:left;">Personal Introduction</h4>
