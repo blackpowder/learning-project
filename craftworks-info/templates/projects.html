@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<!-- Lets see if I can comment on my push directly on github -->
+<!--Allan comments denoted by ## -->
+<!-- ## take a look at this for some info on html5  http://www.webdesignerdepot.com/2012/03/back-to-basics-how-to-code-an-html5-template/ -->
 <html>
   <head>
     <title>Craftworks - Projects</title>
@@ -10,21 +11,28 @@
   </head>
 
   <body>
+    <!-- ##Script tags should be last inside body, however, beware sometimes this can bite you in the bum.
+      http://stackoverflow.com/questions/5329807/benefits-of-loading-js-at-the-bottom-as-opposed-to-the-top-of-the-document
+    -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-2.0.3.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
     <div class="container">
+      <!-- ## Html5 has a header tag-->
       <div class="header">
         <h1>CRAFTWORKS</h1>
 
+        <!-- ##HTML5 Has a <nav> tag-->
         <p>
           <a href="team.html" class="btn btn-default">TEAM</a>
           <a href="" class="btn btn-default disabled">PROJECTS</a>
         </p>
       </div>
 
+      <!-- ##Class name should be consistent, I think it's pretty much standard to use dashes a la craft-text -->
+      <!-- ##Would probably use an html5 <section> tag here-->
       <div class="CraftText">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -32,15 +40,19 @@
         </p>
       </div>
 
-      <div>
+      <!-- ##Would probably use an html5 <section> tag here-->
+      <!-- ##<section>-->
+      <div><!-- ##Don't need these -->
         <h2>Craftworks Projects</h2>
       </div>
 
       <div class="panel-group" id="accordion">
         <div class="panel panel-default">
           <div class="panel-heading">
+            <!-- ##Nesting this much stuff inside an h4 is not really done.  especially a h3 within an h4-->
             <h4 class="panel-title">
               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                  <!-- ##Instead of using pull left and pull right here I would go for the twitter bootstrap column classes (use the grid)-->
                   <h3 class="pull-left name_project"><strong>Insighter:</strong></h3>
 
                   <p class="pull-left time_project">6 Months</p> 
@@ -52,6 +64,7 @@
             </h4>
           </div>
           <div id="collapseOne" class="panel-collapse collapse">
+            <!-- ##Html5 has an <article> tag which would probably make sense here -->
             <div class="panel-body">
               <p><strong>Date: </strong>17 May 13 - 24 Sept 15</p>
               <p><strong>Budget: </strong>$50k + Fairy Gold</p>
@@ -62,6 +75,7 @@
 
               <h5><strong>People & Roles</strong></h5>
 
+              <!-- ##Not 100% sure on this but I think twitter bootstrap grid needs to have a row class around it-->
               <div class="col-xs-6 col-sm-3 col-md-2">
                 <a data-toggle="modal" href="#myModal">
                   <figure class=" img-project container">
@@ -115,6 +129,7 @@
               </a>
             </h4>
           </div>
+          <!-- ## Class/id names again, if you are using a class / id purely for JS then it's good to put js-collapse-2 or something so you know it's for JS only-->
           <div id="collapseTwo" class="panel-collapse collapse">
             <div class="panel-body">
               <p><strong>Date: </strong>17 May 13 - 24 Sept 15</p>
