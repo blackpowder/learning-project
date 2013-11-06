@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  team_number: 1
+  time_project: 1
+  start_date: 2013-11-06 00:22:03
+  end_date: 2013-11-06 00:22:03
+  budget_dollars: 1
+  budget_FG: 1
+  FG_details: MyText
+  short_description: MyText
+  full_description: MyText
+
+two:
+  name: MyString
+  team_number: 1
+  time_project: 1
+  start_date: 2013-11-06 00:22:03
+  end_date: 2013-11-06 00:22:03
+  budget_dollars: 1
+  budget_FG: 1
+  FG_details: MyText
+  short_description: MyText
+  full_description: MyText
