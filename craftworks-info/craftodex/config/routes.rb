@@ -1,4 +1,5 @@
 Craftodex::Application.routes.draw do
+  get "projects/index"
   get "people/index"
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -10,6 +11,10 @@ Craftodex::Application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+
+
+   get 'people' => 'people#index'
+   get 'projects' => 'projects#index'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
