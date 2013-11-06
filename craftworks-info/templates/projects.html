@@ -6,246 +6,237 @@
     <title>Craftworks - Projects</title>
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> 
   </head>
 
   <body>
-    <!-- ##Script tags should be last inside body, however, beware sometimes this can bite you in the bum.
-      http://stackoverflow.com/questions/5329807/benefits-of-loading-js-at-the-bottom-as-opposed-to-the-top-of-the-document
-    -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery-2.0.3.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-
     <div class="container">
-      <!-- ## Html5 has a header tag-->
-      <div class="header">
-        <h1>CRAFTWORKS</h1>
+      <header>
+        <h1>CRAFTWORKS</h1>  
+        <nav>
+          <p>
+            <a href="team.html" class="btn btn-default">TEAM</a>
+            <a href="" class="btn btn-default disabled">PROJECTS</a>
+          </p>
+        </nav>
+      </header>
 
-        <!-- ##HTML5 Has a <nav> tag-->
-        <p>
-          <a href="team.html" class="btn btn-default">TEAM</a>
-          <a href="" class="btn btn-default disabled">PROJECTS</a>
-        </p>
-      </div>
-
-      <!-- ##Class name should be consistent, I think it's pretty much standard to use dashes a la craft-text -->
-      <!-- ##Would probably use an html5 <section> tag here-->
-      <div class="CraftText">
+      <section class="dashes">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt velit esse cillum. <a href="https://docs.google.com/document/d/1S_XT30No56YNRYEb113KPUoODIL3scOa5c4CsHAqKpA/edit#" title="Acced to the Craftwork documentation">Learn more</a>
         </p>
-      </div>
+      </section>
 
-      <!-- ##Would probably use an html5 <section> tag here-->
-      <!-- ##<section>-->
-      <div><!-- ##Don't need these -->
-        <h2>Craftworks Projects</h2>
-      </div>
+      <section>  
+        <h2>Craftworks Projects</h2>  
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <div class="panel-title">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                    <!-- ##Instead of using pull left and pull right here I would go for the twitter bootstrap column classes (use the grid)-->
+                    <h3 class="pull-left name_project"><strong>Insighter:</strong></h3>
 
-      <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <!-- ##Nesting this much stuff inside an h4 is not really done.  especially a h3 within an h4-->
-            <h4 class="panel-title">
-              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                  <!-- ##Instead of using pull left and pull right here I would go for the twitter bootstrap column classes (use the grid)-->
-                  <h3 class="pull-left name_project"><strong>Insighter:</strong></h3>
+                    <p class="pull-left time_project">6 Months</p> 
+                    <p class="pull-left people_project">4 people</p>
+                    <p class="pull-right budget_project">$50k</p> 
+                    <p class="pull-right FG_project" title="When working on a project which has limited funds available people can opt to be paid partially or fully in fairy gold instead of real money. If the project is successful then the person will receive a bonus in the future substantially larger than if they were paid to do the work up front. If the project is not successful they could receive partial payment or nothing at all.">FG</p> 
+                    <p class="description_project" style="clear:left;" >Duis aute irure dolor in reprehenderit. velit esse cillum dolore eu fugiat nulla  Duis aute irure dolor in reprehenderit. velit esse cillum dolore eu fugiat nulla.</p> 
+                </a>
+              </div>
+            </div>
 
-                  <p class="pull-left time_project">6 Months</p> 
-                  <p class="pull-left people_project">4 people</p>
-                  <p class="pull-right budget_project">$50k</p> 
+            <div id="collapseOne" class="panel-collapse collapse">
+              <!-- ##Html5 has an <article> tag which would probably make sense here -->
+              <article>
+                <div class="panel-body">
+                  <p><strong>Date: </strong>17 May 13 - 24 Sept 15</p>
+                  <p><strong>Budget: </strong>$50k + Fairy Gold</p>
+                  <p><strong>Fairy Gold: </strong>10%  of revenue share of sales of insighter at 3 X multiple.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque mi vitae sollicitudin aliquet. Maecenas et odio quis tortor rhoncus pellentesque. Duis porta fermentum orci, id feugiat massa cursus quis. Nunc quis lobortis nisi. Praesent suscipit faucibus lacus non consectetur. Etiam feugiat nisl ac tortor auctor lacinia. Aliquam id elit massa. Aliquam ligula lacus, placerat nec gravida eu, tempus id enim. </br> </br>
+     
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque mi vitae sollicitudin aliquet. Maecenas et odio quis tortor rhoncus pellentesque. Duis porta fermentum orci, id feugiat massa cursus quis. Nunc quis lobortis nisi.<p>
+
+                  <h5><strong>People & Roles</strong></h5>
+
+                  <!-- ##Not 100% sure on this but I think twitter bootstrap grid needs to have a row class around it-->
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-3 col-md-2">
+                      <a data-toggle="modal" href="#myModal">
+                        <figure class=" img-project container">
+                          <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
+                          <figcaption class="text-center">Programmer</figcaption>    
+                        </figure>
+                      </a>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-3 col-md-2">
+                      <a data-toggle="modal" href="#myModal">
+                        <figure class=" img-project container">
+                          <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
+                          <figcaption class="text-center">Programmer</figcaption>    
+                        </figure>
+                      </a>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-3 col-md-2">
+                      <a data-toggle="modal" href="#myModal">
+                        <figure class=" img-project container">
+                          <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
+                          <figcaption class="text-center">Programmer</figcaption>    
+                        </figure>
+                      </a>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-3 col-md-2">
+                      <a data-toggle="modal" href="#myModal">
+                        <figure class=" img-project container">
+                          <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
+                          <figcaption class="text-center">Programmer</figcaption>    
+                        </figure>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                  <h3 class="pull-left name_project"><strong>Xpoint</strong></h3>
+
+                  <p class="pull-left time_project">1 Year</p> 
+                  <p class="pull-left people_project">6 people</p> 
+                  <p class="pull-right budget_project">$22k</p> 
+                  <p class="description_project" style="clear:left;" >Duis aute irure dolor in reprehenderit. velit esse cillum dolore eu fugiat nulla.</p> 
+                </a>
+              </h4>
+            </div>
+
+            <div id="collapseTwo" class="panel-collapse collapse js-collapse-2">
+              <div class="panel-body">
+                <p><strong>Date: </strong>17 May 13 - 24 Sept 15</p>
+                <p><strong>Budget: </strong>$50k + Fairy Gold</p>
+                <p><strong>Fairy Gold: </strong>10%  of revenue share of sales of insighter at 3 X multiple.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque mi vitae sollicitudin aliquet. Maecenas et odio quis tortor rhoncus pellentesque. Duis porta fermentum orci, id feugiat massa cursus quis. Nunc quis lobortis nisi. Praesent suscipit faucibus lacus non consectetur. Etiam feugiat nisl ac tortor auctor lacinia. Aliquam id elit massa. Aliquam ligula lacus, placerat nec gravida eu, tempus id enim. </br> </br>
+   
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque mi vitae sollicitudin aliquet. Maecenas et odio quis tortor rhoncus pellentesque. Duis porta fermentum orci, id feugiat massa cursus quis. Nunc quis lobortis nisi.<p>
+
+                <h5><strong>People & Roles</strong></h5>
+
+                <div class="col-xs-6 col-sm-3 col-md-2">
+                  <a data-toggle="modal" href="#myModal">
+                    <figure class=" img-project container">
+                      <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
+                      <figcaption class="text-center">Programmer</figcaption>    
+                    </figure>
+                  </a>
+                </div>
+
+                <div class="col-xs-6 col-sm-3 col-md-2">
+                  <a data-toggle="modal" href="#myModal">
+                    <figure class=" img-project container">
+                      <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
+                      <figcaption class="text-center">Programmer</figcaption>    
+                    </figure>
+                  </a>
+                </div>
+
+                <div class="col-xs-6 col-sm-3 col-md-2">
+                  <a data-toggle="modal" href="#myModal">
+                    <figure class=" img-project container">
+                      <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
+                      <figcaption class="text-center">Programmer</figcaption>    
+                    </figure>
+                  </a>
+                </div>
+
+                <div class="col-xs-6 col-sm-3 col-md-2">
+                  <a data-toggle="modal" href="#myModal">
+                    <figure class=" img-project container">
+                      <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
+                      <figcaption class="text-center">Programmer</figcaption>    
+                    </figure>
+                  </a>
+                </div>              
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                  <h3 class="pull-left name_project"><strong>Park Audits</strong></h3>
+
+                  <p class="pull-left time_project">7 Months</p> 
+                  <p class="pull-left people_project">5 people</p>
+                  <p class="pull-right budget_project">$60k</p>
                   <p class="pull-right FG_project" title="When working on a project which has limited funds available people can opt to be paid partially or fully in fairy gold instead of real money. If the project is successful then the person will receive a bonus in the future substantially larger than if they were paid to do the work up front. If the project is not successful they could receive partial payment or nothing at all.">FG</p> 
-                  <p class="description_project" style="clear:left;" >Duis aute irure dolor in reprehenderit. velit esse cillum dolore eu fugiat nulla  Duis aute irure dolor in reprehenderit. velit esse cillum dolore eu fugiat nulla.</p> 
-              </a>
-            </h4>
-          </div>
-          <div id="collapseOne" class="panel-collapse collapse">
-            <!-- ##Html5 has an <article> tag which would probably make sense here -->
-            <div class="panel-body">
-              <p><strong>Date: </strong>17 May 13 - 24 Sept 15</p>
-              <p><strong>Budget: </strong>$50k + Fairy Gold</p>
-              <p><strong>Fairy Gold: </strong>10%  of revenue share of sales of insighter at 3 X multiple.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque mi vitae sollicitudin aliquet. Maecenas et odio quis tortor rhoncus pellentesque. Duis porta fermentum orci, id feugiat massa cursus quis. Nunc quis lobortis nisi. Praesent suscipit faucibus lacus non consectetur. Etiam feugiat nisl ac tortor auctor lacinia. Aliquam id elit massa. Aliquam ligula lacus, placerat nec gravida eu, tempus id enim. </br> </br>
- 
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque mi vitae sollicitudin aliquet. Maecenas et odio quis tortor rhoncus pellentesque. Duis porta fermentum orci, id feugiat massa cursus quis. Nunc quis lobortis nisi.<p>
-
-              <h5><strong>People & Roles</strong></h5>
-
-              <!-- ##Not 100% sure on this but I think twitter bootstrap grid needs to have a row class around it-->
-              <div class="col-xs-6 col-sm-3 col-md-2">
-                <a data-toggle="modal" href="#myModal">
-                  <figure class=" img-project container">
-                    <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
-                    <figcaption class="text-center">Programmer</figcaption>    
-                  </figure>
+                  <p class="description_project" style="clear:left;" >Duis aute irure dolor in reprehenderit. velit esse cillum dolore eu fugiat nulla  Duis aute irure dolor in reprehenderit. velit esse cillum dolore eu fugiat nulla. eu fugiat nulla  Duis aute irure dolor in reprehenderit. velit esse cillum dolore eu fugiat nulla.</p> 
                 </a>
-              </div>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+              <div class="panel-body">
+                
+                <p><strong>Date: </strong>17 May 13 - 24 Sept 15</p>
+                <p><strong>Budget: </strong>$50k + Fairy Gold</p>
+                <p><strong>Fairy Gold: </strong>10%  of revenue share of sales of insighter at 3 X multiple.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque mi vitae sollicitudin aliquet. Maecenas et odio quis tortor rhoncus pellentesque. Duis porta fermentum orci, id feugiat massa cursus quis. Nunc quis lobortis nisi. Praesent suscipit faucibus lacus non consectetur. Etiam feugiat nisl ac tortor auctor lacinia. Aliquam id elit massa. Aliquam ligula lacus, placerat nec gravida eu, tempus id enim. </br> </br>
+   
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque mi vitae sollicitudin aliquet. Maecenas et odio quis tortor rhoncus pellentesque. Duis porta fermentum orci, id feugiat massa cursus quis. Nunc quis lobortis nisi.<p>
 
-              <div class="col-xs-6 col-sm-3 col-md-2">
-                <a data-toggle="modal" href="#myModal">
-                  <figure class=" img-project container">
-                    <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
-                    <figcaption class="text-center">Programmer</figcaption>    
-                  </figure>
-                </a>
-              </div>
+                <h5><strong>People & Roles</strong></h5>
 
-              <div class="col-xs-6 col-sm-3 col-md-2">
-                <a data-toggle="modal" href="#myModal">
-                  <figure class=" img-project container">
-                    <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
-                    <figcaption class="text-center">Programmer</figcaption>    
-                  </figure>
-                </a>
-              </div>
+                <div class="col-xs-6 col-sm-3 col-md-2">
+                  <a data-toggle="modal" href="#myModal">
+                    <figure class=" img-project container">
+                      <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
+                      <figcaption class="text-center">Programmer</figcaption>    
+                    </figure>
+                  </a>
+                </div>
 
-              <div class="col-xs-6 col-sm-3 col-md-2">
-                <a data-toggle="modal" href="#myModal">
-                  <figure class=" img-project container">
-                    <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
-                    <figcaption class="text-center">Programmer</figcaption>    
-                  </figure>
-                </a>
+                <div class="col-xs-6 col-sm-3 col-md-2">
+                  <a data-toggle="modal" href="#myModal">
+                    <figure class=" img-project container">
+                      <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
+                      <figcaption class="text-center">Programmer</figcaption>    
+                    </figure>
+                  </a>
+                </div>
+
+                <div class="col-xs-6 col-sm-3 col-md-2">
+                  <a data-toggle="modal" href="#myModal">
+                    <figure class=" img-project container">
+                      <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
+                      <figcaption class="text-center">Programmer</figcaption>    
+                    </figure>
+                  </a>
+                </div>
+
+                <div class="col-xs-6 col-sm-3 col-md-2">
+                  <a data-toggle="modal" href="#myModal">
+                    <figure class=" img-project container">
+                      <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
+                      <figcaption class="text-center">Programmer</figcaption>    
+                    </figure>
+                  </a>
+                </div>
+
               </div>
             </div>
           </div>
         </div>
-
-
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                <h3 class="pull-left name_project"><strong>Xpoint</strong></h3>
-
-                <p class="pull-left time_project">1 Year</p> 
-                <p class="pull-left people_project">6 people</p> 
-                <p class="pull-right budget_project">$22k</p> 
-                <p class="description_project" style="clear:left;" >Duis aute irure dolor in reprehenderit. velit esse cillum dolore eu fugiat nulla.</p> 
-              </a>
-            </h4>
-          </div>
-          <!-- ## Class/id names again, if you are using a class / id purely for JS then it's good to put js-collapse-2 or something so you know it's for JS only-->
-          <div id="collapseTwo" class="panel-collapse collapse">
-            <div class="panel-body">
-              <p><strong>Date: </strong>17 May 13 - 24 Sept 15</p>
-              <p><strong>Budget: </strong>$50k + Fairy Gold</p>
-              <p><strong>Fairy Gold: </strong>10%  of revenue share of sales of insighter at 3 X multiple.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque mi vitae sollicitudin aliquet. Maecenas et odio quis tortor rhoncus pellentesque. Duis porta fermentum orci, id feugiat massa cursus quis. Nunc quis lobortis nisi. Praesent suscipit faucibus lacus non consectetur. Etiam feugiat nisl ac tortor auctor lacinia. Aliquam id elit massa. Aliquam ligula lacus, placerat nec gravida eu, tempus id enim. </br> </br>
- 
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque mi vitae sollicitudin aliquet. Maecenas et odio quis tortor rhoncus pellentesque. Duis porta fermentum orci, id feugiat massa cursus quis. Nunc quis lobortis nisi.<p>
-
-              <h5><strong>People & Roles</strong></h5>
-
-              <div class="col-xs-6 col-sm-3 col-md-2">
-                <a data-toggle="modal" href="#myModal">
-                  <figure class=" img-project container">
-                    <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
-                    <figcaption class="text-center">Programmer</figcaption>    
-                  </figure>
-                </a>
-              </div>
-
-              <div class="col-xs-6 col-sm-3 col-md-2">
-                <a data-toggle="modal" href="#myModal">
-                  <figure class=" img-project container">
-                    <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
-                    <figcaption class="text-center">Programmer</figcaption>    
-                  </figure>
-                </a>
-              </div>
-
-              <div class="col-xs-6 col-sm-3 col-md-2">
-                <a data-toggle="modal" href="#myModal">
-                  <figure class=" img-project container">
-                    <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
-                    <figcaption class="text-center">Programmer</figcaption>    
-                  </figure>
-                </a>
-              </div>
-
-              <div class="col-xs-6 col-sm-3 col-md-2">
-                <a data-toggle="modal" href="#myModal">
-                  <figure class=" img-project container">
-                    <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
-                    <figcaption class="text-center">Programmer</figcaption>    
-                  </figure>
-                </a>
-              </div>              
-            </div>
-          </div>
-        </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                <h3 class="pull-left name_project"><strong>Park Audits</strong></h3>
-
-                <p class="pull-left time_project">7 Months</p> 
-                <p class="pull-left people_project">5 people</p>
-                <p class="pull-right budget_project">$60k</p>
-                <p class="pull-right FG_project" title="When working on a project which has limited funds available people can opt to be paid partially or fully in fairy gold instead of real money. If the project is successful then the person will receive a bonus in the future substantially larger than if they were paid to do the work up front. If the project is not successful they could receive partial payment or nothing at all.">FG</p> 
-                <p class="description_project" style="clear:left;" >Duis aute irure dolor in reprehenderit. velit esse cillum dolore eu fugiat nulla  Duis aute irure dolor in reprehenderit. velit esse cillum dolore eu fugiat nulla. eu fugiat nulla  Duis aute irure dolor in reprehenderit. velit esse cillum dolore eu fugiat nulla.</p> 
-              </a>
-            </h4>
-          </div>
-          <div id="collapseThree" class="panel-collapse collapse">
-            <div class="panel-body">
-              
-              <p><strong>Date: </strong>17 May 13 - 24 Sept 15</p>
-              <p><strong>Budget: </strong>$50k + Fairy Gold</p>
-              <p><strong>Fairy Gold: </strong>10%  of revenue share of sales of insighter at 3 X multiple.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque mi vitae sollicitudin aliquet. Maecenas et odio quis tortor rhoncus pellentesque. Duis porta fermentum orci, id feugiat massa cursus quis. Nunc quis lobortis nisi. Praesent suscipit faucibus lacus non consectetur. Etiam feugiat nisl ac tortor auctor lacinia. Aliquam id elit massa. Aliquam ligula lacus, placerat nec gravida eu, tempus id enim. </br> </br>
- 
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque mi vitae sollicitudin aliquet. Maecenas et odio quis tortor rhoncus pellentesque. Duis porta fermentum orci, id feugiat massa cursus quis. Nunc quis lobortis nisi.<p>
-
-              <h5><strong>People & Roles</strong></h5>
-
-              <div class="col-xs-6 col-sm-3 col-md-2">
-                <a data-toggle="modal" href="#myModal">
-                  <figure class=" img-project container">
-                    <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
-                    <figcaption class="text-center">Programmer</figcaption>    
-                  </figure>
-                </a>
-              </div>
-
-              <div class="col-xs-6 col-sm-3 col-md-2">
-                <a data-toggle="modal" href="#myModal">
-                  <figure class=" img-project container">
-                    <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
-                    <figcaption class="text-center">Programmer</figcaption>    
-                  </figure>
-                </a>
-              </div>
-
-              <div class="col-xs-6 col-sm-3 col-md-2">
-                <a data-toggle="modal" href="#myModal">
-                  <figure class=" img-project container">
-                    <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
-                    <figcaption class="text-center">Programmer</figcaption>    
-                  </figure>
-                </a>
-              </div>
-
-              <div class="col-xs-6 col-sm-3 col-md-2">
-                <a data-toggle="modal" href="#myModal">
-                  <figure class=" img-project container">
-                    <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
-                    <figcaption class="text-center">Programmer</figcaption>    
-                  </figure>
-                </a>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
+      </section>
     </div>
   </body>
+
+  <script src="js/jquery-2.0.3.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</html>
