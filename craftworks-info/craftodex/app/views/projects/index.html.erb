@@ -1,5 +1,73 @@
 <h2>Craftworks - Projects</h2>
 
-<% @projects.each do |person| %>
+<% @projects.each do |project| %>
 
+	<div class="panel-group" id="accordion">
+	  <div class="panel panel-default">
+	    <div class="panel-heading">
+	      <div class="panel-title">
+	        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= project.id %>">
+	            <div class="row hidden-xs">
+	              <div class="col-sm-6 col-md-6">
+	                <p>
+	                  <strong class="name_project"><%= project.name %></strong> <span class="months"><%= project.time_project %> Months</span> - <span class="team_number"><%= project.team_number %> people</span>
+	                </p>
+	              </div>
+
+	              <div class="col-sm-6 col-md-6 ">
+	                <p class="text-right">
+
+	                	<% if project.budget_FG? %>
+	                 		<span class="FG_budget" title="When working on a project which has limited funds available people can opt to be paid partially or fully in fairy gold instead of real money. If the project is successful then the person will receive a bonus in the future substantially larger than if they were paid to do the work up front. If the project is not successful they could receive partial payment or nothing at all.">FG</span>
+	                 	<% end %>
+
+	                  <span class="dollars_budjet">$<%= project.budget_dollars%>k</span>
+	                </p>
+	              </div>
+	            </div>
+
+	            <div class="row visible-xs">
+	              <div class="col-xs-12">
+	                <p><strong class="name_project"><%= project.name %></strong>
+	              </div>
+
+	              <div class="col-xs-12">
+	                <span class="months"><%= project.time_project %> Months</span> - <span class="team_number"><%= project.team_number %> people</span></p>
+	              </div>
+	            </div>
+	            <p class="description_project" style="clear:left;" ><%= project.short_description %></p>
+	        </a>
+	      </div>
+	    </div>
+
+	    <div id="collapse<%= project.id %>" class="panel-collapse collapse">
+	      <article>
+	        <div class="panel-body">
+	          <p><strong>Date: </strong><%= project.start_date %> - <%= project.end_date %></p>
+	          <p><strong>Budget: </strong>$<%= project.budget_dollars %>k 
+
+	          	<% if project.budget_FG? %> 
+	          		<span> + <%= project.budget_FG %>k Fairy Gold</span></p>
+	          		<p><strong>Fairy Gold: </strong><%= project.FG_details %></p>
+	          	<% end %>
+	          
+	          <p><%= project.full_description %><p>
+
+	          <h5><strong>People & Roles</strong></h5>
+
+	          <div class="row">
+	            <div class="col-xs-6 col-sm-3 col-md-2">
+	              <a data-toggle="modal" href="#myModal">
+	                <figure class=" img-project container">
+	                  <img src="images/profil.jpg" class="img-responsive img-rounded" alt="Bloc-Notes" />
+	                  <figcaption class="text-center">Programmer</figcaption>    
+	                </figure>
+	              </a>
+	            </div>
+	          </div>
+	        </div>
+	      </article>
+	    </div>
+	  </div>
+	</div>
 <% end %>
