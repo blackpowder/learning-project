@@ -1,0 +1,62 @@
+ <div class="modal fade" id="myModal<%= person.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    <div class="modal-dialog">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	          <h3 class="modal-title text-center"><%= person.name %></h3>
+	          <p class="modal-title text-center profil-job"><%= person.role %></p>
+	        </div>
+
+	        <div class="modal-body">
+	          <div class="pull-left">
+	            <p><strong>Role: </strong><%= person.role %></p>
+	            <p><strong>Grade: </strong><%= person.grade %></p>
+	          </div>
+
+	          	<%= image_tag avatar_url(person), :class => "img-responsive img-thumbnail img-profil pull-right " %>
+
+	       		<% if person.introduction? %>
+		          <h4 class="categories" style="clear:left;">Personal Introduction</h4>
+		          <p><%= person.introduction %></p>
+	     			<% end %>
+
+		        <% if person.biography? %>
+		          <h4 class="categories">Professional Biographie </h4>
+		          <p><%= person.biography %></p>
+		      	<% end %>
+
+		        <% if person.goals? %>
+		          <h4 class="categories">Goals for the next 6 months</h4>
+		          <p><%= person.goals %></p>
+		      	<% end %>
+
+		        <% if person.learning_goals? %>
+		          <h4 class="categories">Learning goals</h4>
+		          <p><%= person.learning_goals %></p>
+		      	<% end %>
+        
+			    <% if person.teach? %>
+			      <h4 class="categories">Happy to teach</h4>
+			      <p><%= person.teach %></p>
+			    <% end %>
+	        
+
+	        	<p>
+	        		<strong>Craftworks Projects: </strong>
+	        		<%= person.projects.collect { |project| link_to_project(project)}.join(", ").html_safe %>
+	        	</p>
+
+		        <p>
+		          <a href="<%= person.yammer %>" class="yammer">See on Yammer</a> 
+		          <a href="<%= person.linked_in %>" class="linkedin">See on Linkedin</a> 
+		          <a href="<%= person.github %>" class="github">See on Github</a>
+		        </p>
+		      </div>
+	      
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+
+		    </div><!-- /.modal-dialog -->
+		  </div><!-- /.modal -->
+		</div>

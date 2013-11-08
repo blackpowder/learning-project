@@ -16,11 +16,9 @@
 
 	              <div class="col-sm-6 col-md-6 ">
 	                <p class="text-right">
-
 	                	<% if project.budget_FG? %>
 	                 		<span class="FG_budget" title="When working on a project which has limited funds available people can opt to be paid partially or fully in fairy gold instead of real money. If the project is successful then the person will receive a bonus in the future substantially larger than if they were paid to do the work up front. If the project is not successful they could receive partial payment or nothing at all.">FG</span>
 	                 	<% end %>
-
 	                  <span class="dollars_budjet">$<%= project.budget_dollars%>k</span>
 	                </p>
 	              </div>
@@ -54,23 +52,19 @@
 	          
 	          <p><%= project.full_description %><p>
 
-	          <h5><strong>People & Roles</strong></h5>
-
-
-	          
+	          <h5><strong>People & Roles</strong></h5>	          
 
 	          <div class="row">
 	          	<% project.people.each do |person| %>
 		            <div class="col-xs-6 col-sm-3 col-md-2">
-		              <a data-toggle="modal" href="#myModal">
+		              <a data-toggle="modal" href="#myModal<%= person.id %>">
 		                <figure class=" img-project container">
 		                  <%= image_tag avatar_url(person), :class => "img-responsive img-rounded" %>
-
-		                  
-		                  <figcaption class="text-center"><%= person.job_title %></figcaption>    
+		                 <figcaption class="text-center"><%= person.job_title =%></figcaption>    
 		                </figure>
 		              </a>
 		            </div>
+		            <%= render partial: "people/modal", locals: {person: person} %>
 	            <% end %>
 	          </div>
 	        </div>
