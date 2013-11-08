@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Craftworks - Team</title>
+    <title>Craftworks - <%= @title %></title>
     <%= stylesheet_link_tag "style" %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= stylesheet_link_tag "bootstrap.min" %>
@@ -13,8 +13,8 @@
         <nav>
           <h1>CRAFTWORKS</h1>
           <p>
-            <%= link_to "TEAM", people_path, class: "btn btn-default disabled" %>
-            <%= link_to "PROJECTS", projects_path, class: "btn btn-default" %>
+            <%= link_to "TEAM", people_path, class: "btn btn-default #{"disabled" if params[:controller] == "people"}" %>
+            <%= link_to "PROJECTS", projects_path, class: "btn btn-default #{"disabled" if params[:controller] == "projects"}" %>
           </p>
         </nav>
       <header>
