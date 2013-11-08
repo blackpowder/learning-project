@@ -58,7 +58,12 @@
 			        <p><%= person.teach %></p>
 			      <% end %>
 	        
-	        	<p><strong>Craftworks Projects: </strong><a href="projects.html">Xpoint</a>, <a href="projects.html">Insighter</a></p>
+	        	<!-- <p><strong>Craftworks Projects: </strong><a href="projects.html">Xpoint</a>, <a href="projects.html">Insighter</a></p> -->
+
+	        	<p>
+	        		<strong>Craftworks Projects: </strong>
+	        		<%= person.projects.collect { |project| link_to_project(project)}.join(", ").html_safe %>
+	        	</p>
 
 		        <p>
 		          <a href="<%= person.yammer %>" class="yammer">See on Yammer</a> 
