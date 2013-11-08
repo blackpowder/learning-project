@@ -41,24 +41,20 @@ def order_common_elements(f, split = " ")
 	elements_order = elements.inject(Hash.new(0)) {|counts, word_list| counts[word_list] += 1; counts }
 	sorted_words = elements_order.sort_by {|key, value| value}
 	element_keys = sorted_words.collect {|item| item[0]}
-  #todo - use array slice to get the common elements // read slice method
-  #todo - return the common elements as an array instead of instance variables 
 	element_keys[-3, 3]
 end
 
 def common_words(f)
 	common_words = order_common_elements(f)
-  #todo get common_elements from the return value and not instance variables
-	unless common_words == nil
-		puts "Top three most common words:  #{common_words[2]}, #{common_words[1]}, #{common_words[0]}" 
+	unless common_words.nil? 
+		puts "Top three most common words:  #{common_words.reverse.join(', ')}" 
 	end 
 end
 
 def common_letters(f)
 	common_letters = order_common_elements(f, //)
-  #todo get common_elements from the return value and not instance variables
-	unless common_letters == nil
-		puts "Top three most common letters: #{common_letters[2]}, #{common_letters[1]}, #{common_letters[0]}"
+	unless common_letters.nil?
+		puts "Top three most common letters: #{common_letters.reverse.join(', ')}"
 	end
 end
 
