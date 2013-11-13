@@ -1,33 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html class="color-back">
   <head>
     <title>Craftworks - <%= @title %></title>
-    <%= stylesheet_link_tag "style" %>
+    <%= stylesheet_link_tag "application" %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%= stylesheet_link_tag "bootstrap.min" %>
   </head>
 
   <body>
-    <div class="container">
-      <header>
-        <nav>
-          <h1>CRAFTWORKS</h1>
-          <p>
-            <%= link_to "TEAM", people_path, class: "btn btn-default #{"disabled" if params[:controller] == "people"}" %>
-            <%= link_to "PROJECTS", projects_path, class: "btn btn-default #{"disabled" if params[:controller] == "projects"}" %>
-          </p>
-        </nav>
-      <header>
-
-      <div class="dashes">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt velit esse cillum. <a href="https://docs.google.com/document/d/1S_XT30No56YNRYEb113KPUoODIL3scOa5c4CsHAqKpA/edit#" title="Acced to the Craftwork documentation">Learn more</a>
+    <header>
+      <nav>
+        <h1 class="text-center">CRAFTWORKS</h1>
+        <p class="text-center">
+          <%= link_to "TEAM", people_path, class: "btn btn-default btn-team #{"disabled" if params[:controller] == "people"}" %>
+          <%= link_to "PROJECTS", projects_path, class: "btn btn-default btn-projects #{"disabled" if params[:controller] == "projects"}" %>
         </p>
+      </nav>
+    </header>
+    <div class="color-back">
+      <div class="container">
+        <section class="dashes">
+          <p>
+            Enspiral Craftworks is a collective of programmers, designers and entrepreneurs who specialise in building web and mobile applications. We are particularly passionate about building apps which help grow and develop localisation, education, social enterprises, collectives, self management and networked based organisations. <br/> We also absolutely love all aspects of the learning/teaching process, practicing our crafts and creating value at the intersection of purpose and beauty.<a href="https://docs.google.com/document/d/1S_XT30No56YNRYEb113KPUoODIL3scOa5c4CsHAqKpA/edit#" title="Acced to the Craftwork documentation"> Learn more</a>
+          </p>
+        </section>
+
+        <%= yield %>
+
       </div>
-
-      <%= yield %>
-
     </div>
   </body>
     <%= javascript_include_tag "jquery-2.0.3" %>

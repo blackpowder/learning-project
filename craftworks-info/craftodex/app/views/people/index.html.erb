@@ -1,4 +1,4 @@
-<h2>Team Members</h2>
+<h2 class="title_page">Team Members</h2>
 
 
 <% @people.each do |person| %>
@@ -7,7 +7,7 @@
 	    <a data-toggle="modal" href="#myModal<%= person.id %>">
 
 	      <figure class="photos_team container">
-	        <%= image_tag avatar_url(person), :class => "img-responsive img-rounded" %>
+	        <%= image_tag avatar_url(person), :class => "img-responsive img-rounded img_profil" %>
 	        <figcaption class="name text-center"><%= person.name %></figcaption>
 	        <figcaption class="job text-center"><%= person.job_title %></figcaption>
 	        <figcaption class= "city text-center"><%= person.city %></figcaption>       

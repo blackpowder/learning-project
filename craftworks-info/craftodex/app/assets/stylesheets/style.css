@@ -1,10 +1,160 @@
+/*  HEADER CSS */ 
 
-.img-profil
+.container
+{
+	background: white
+}
+
+.color-back
+{
+	background: #151515
+}
+
+header
+{
+	position: fixed;
+    height: 200px;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+header nav
+{
+	background: black;
+	color: white;
+	padding: 20px 0 40px 0;
+}
+
+header h1
+{
+	font-weight: bold;
+	font-size: 3em;
+	margin-bottom: 20px;
+	text-shadow: 6px 2px 7px rgba(136, 117, 117, 0.75);
+    color: #f1f5f8;
+}
+
+header .btn
+{
+	width: 100px;
+
+}
+
+header .btn:hover
+{
+	width: 100px;
+}
+
+header .btn-team
+{
+	margin-right: 5px
+}
+
+.dashes { 
+    margin-top: 190px;
+    margin-bottom: 40px;
+}
+
+.dashes p 
+{
+	font-size: 1.3em;
+	color: black;
+}
+
+.dashes p:hover
+
+{
+	font-style: italic;
+}
+
+.dashes a
+{
+	color: black;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+
+
+/* Pop-up CSS */
+
+
+.img-popup
 {
 	width: 20%
 }
 
-.img-project
+.modal 
 {
-	width: 90%;
+	color: black;
+}
+
+.modal .profil-name
+{
+	font-weight: bold
+}
+
+.modal .profil-job
+{
+	font-style: italic;
+}
+
+.modal strong
+{
+	font-weight: bold;
+	font-size: 1.2em
+}
+
+.modal .categories
+{
+	text-decoration: underline;
+	padding-top: 20px;
+	font-style: italic;
+}
+
+.modal a
+{
+	color: black;
+}
+
+.modal .craft_project
+{
+	margin-right: 6px;
+}
+
+.modal .craft
+{
+	margin-top: 20px
+}
+
+.modal .link
+{
+	font-weight: bold;
+}
+
+.modal .btn-sm
+{
+	margin-top: 15px;
+	background: #424242;
+	color: white;
+	font-weight: bold
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.modal .btn-sm:hover
+{
+	color: grey ;
+}
+
+.yammer
+{
+	margin-right: 10px
+}
+
+.github
+{
+	margin-left: 10px
 }

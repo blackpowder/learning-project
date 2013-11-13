@@ -1,3 +1,39 @@
-// Place all the styles related to the People controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.title_page
+{
+	font-weight: bold;
+	border-bottom: 1px solid black;
+	margin-bottom: 30px;
+	color: black;
+}
+
+.title_page:hover
+{
+	text-shadow: 6px 2px 4px rgba(136, 117, 117, 0.75);
+}
+
+.img_profil
+{
+	-moz-box-shadow: 0 0 2px 5px black;
+	-webkit-box-shadow: 0 0 2px 5px black;
+	box-shadow: 0 0 2px 5px black;
+}
+
+.photos_team  
+{
+	color: black;
+}
+
+.photos_team img
+{
+	margin: auto
+}
+.photos_team .name
+{
+	margin-top: 10px
+}
+
+.photos_team .city
+{
+	margin-bottom: 40px
+}
+
