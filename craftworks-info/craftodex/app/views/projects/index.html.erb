@@ -7,19 +7,19 @@
 	    <div class="panel-heading">
 	      <div class="panel-title">
 	        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= project.id %>">
-	            <div class="row hidden-xs">
+	            <div class="row hidden-xs intro">
 	              <div class="col-sm-6 col-md-6">
 	                <p>
-	                  <strong class="name_project"><%= project.name %></strong> <span class="months"><%= project.time_project %></span> - <span class="team_number"><%= project.team_number %> people</span>
+	                  <strong class="name_project"><%= project.name %>:</strong> <span class="time" title="Time project"><%= project.time_project %> - </span> <span class="team_number title" title= "Number of Persons in the team"><%= project.team_number %> people</span>
 	                </p>
 	              </div>
 
 	              <div class="col-sm-6 col-md-6 ">
 	                <p class="text-right">
 	                	<% if project.budget_FG? %>
-	                 		<span class="FG_budget" title="When working on a project which has limited funds available people can opt to be paid partially or fully in fairy gold instead of real money. If the project is successful then the person will receive a bonus in the future substantially larger than if they were paid to do the work up front. If the project is not successful they could receive partial payment or nothing at all.">FG</span>
+	                 		<span class="FG_budget" title="The project include Fairy Gold: 'When working on a project which has limited funds available people can opt to be paid partially or fully in fairy gold instead of real money. If the project is successful then the person will receive a bonus in the future substantially larger than if they were paid to do the work up front. If the project is not successful they could receive partial payment or nothing at all'." >FG</span>
 	                 	<% end %>
-	                  <span class="dollars_budjet">$<%= project.budget_dollars%>k</span>
+	                  <span class="dollars_budjet" title="Budject for this project">$<%= project.budget_dollars%>k</span>
 	                </p>
 	              </div>
 	            </div>
@@ -38,7 +38,8 @@
 	      </div>
 	    </div>
 
-	    <a id="<%= project.id %>"><a>
+	    <a id="<%= project.id %>"></a>
+
 	    <div id="collapse<%= project.id %>" class="panel-collapse collapse <%= "in" if params[:id].to_i == project.id %>">
 	      <article>
 	        <div class="panel-body">
@@ -54,19 +55,20 @@
 
 	          <h5><strong>People & Roles</strong></h5>	          
 
-	          <div class="row">
 	          	<% project.people.each do |person| %>
-		            <div class="col-xs-6 col-sm-3 col-md-2">
+	          	<div class="row">
+		            <div class="col-xs-6 col-sm-4 col-md-2">
 		              <a data-toggle="modal" href="#myModal<%= person.id %>">
-		                <figure class=" img-project container">
-		                  <%= image_tag avatar_url(person), :class => "img-responsive img-rounded" %>
-		                 <figcaption class="text-center"><%= person.job_title =%></figcaption>    
+		                <figure class="test img-project container">
+		                  <%= image_tag avatar_url(person), :class => "img-responsive img-rounded", :title =>  person.name %>
+		                 <figcaption class="text-center"><%= person.job_title %></figcaption>  
 		                </figure>
 		              </a>
 		            </div>
 		            <%= render partial: "people/modal", locals: {person: person} %>
-	            <% end %>
-	          </div>
+
+	            </div>
+	            <% end %>     
 	        </div>
 	      </article>
 	    </div>

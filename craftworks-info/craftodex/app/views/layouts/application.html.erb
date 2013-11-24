@@ -8,8 +8,9 @@
 
   <body>
     <header>
-      <nav>
-        <h1 class="text-center">CRAFTWORKS</h1>
+      <nav> 
+
+        <h1 class="text-center"><%= image_tag("enspiral.jpg", :class => "logo") %>CRAFTWORKS</h1>
         <p class="text-center">
           <%= link_to "TEAM", people_path, class: "btn btn-default btn-team #{"disabled" if params[:controller] == "people"}" %>
           <%= link_to "PROJECTS", projects_path, class: "btn btn-default btn-projects #{"disabled" if params[:controller] == "projects"}" %>
@@ -20,7 +21,7 @@
       <div class="container">
         <section class="dashes">
           <p>
-            Enspiral Craftworks is a collective of programmers, designers and entrepreneurs who specialise in building web and mobile applications. We are particularly passionate about building apps which help grow and develop localisation, education, social enterprises, collectives, self management and networked based organisations. <br/> We also absolutely love all aspects of the learning/teaching process, practicing our crafts and creating value at the intersection of purpose and beauty.<a href="https://docs.google.com/document/d/1S_XT30No56YNRYEb113KPUoODIL3scOa5c4CsHAqKpA/edit#" title="Acced to the Craftwork documentation"> Learn more</a>
+            Enspiral Craftworks is a collective of programmers, designers and entrepreneurs who specialise in building web and mobile applications. We are particularly passionate about building apps which help grow and develop localisation, education, social enterprises, collectives, self management and networked based organisations. <br/> We also absolutely love all aspects of the learning/teaching process, practicing our crafts and creating value at the intersection of purpose and beauty.<a href="https://docs.google.com/document/d/1S_XT30No56YNRYEb113KPUoODIL3scOa5c4CsHAqKpA/edit#" title="Click to see the Craftwork documentation"> Learn more</a>
           </p>
         </section>
 

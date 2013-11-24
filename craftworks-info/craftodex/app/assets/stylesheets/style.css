@@ -1,5 +1,11 @@
 /*  HEADER CSS */ 
 
+.logo
+{
+	position: absolute;
+	margin-left: -120px; 
+}
+
 .container
 {
 	background: white
@@ -142,6 +148,10 @@ header .btn-team
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
+
+	-moz-opacity: 0.90;
+	opacity: 0.90;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=90);
 }
 
 .modal .btn-sm:hover
