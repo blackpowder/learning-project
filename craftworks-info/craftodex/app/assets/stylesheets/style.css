@@ -151,7 +151,7 @@ header .btn-team
 
 	-moz-opacity: 0.90;
 	opacity: 0.90;
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=90);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
 }
 
 .modal .btn-sm:hover
